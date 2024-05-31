@@ -1,40 +1,38 @@
+@font-face {
+    font-family: 'Bungee';
+    src: url('/assets/font/Bungee/Bungee-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'VT323', monospace;
-  }
-  
-  body,
-  .snake {
-    background-color: #414141;
-  }
-  
-  #game-board {
-    border-radius: 100px;
-    display: grid;
-    grid-template-columns: repeat(24, 40px);
-    grid-template-rows: repeat(32, 40px);
-    margin: 5px;
-  }
-  
-  .game-border-1 {
-    border: #595f43 solid 8px;
-    border-radius: 24px;
-    box-shadow: inset 0 0 0 8px #595f43;
-  }
-  
-  .game-border-2 {
-    border: #abb78a solid 6px;
-    border-radius: 20px;
-    box-shadow: inset 0 0 0 8px #abb78a;
+    min-height: 100vh;
+    font-family: 'Bungee', sans-serif;
+    background-image: linear-gradient(to top right, rgb(255, 0, 234), rgb(66, 66, 192));
+    z-index: 0;
 }
 
-.game-border-3 {
-    border-radius: 16px;
-    box-shadow: inset 0 0 0 4px #8b966c;
+
+.snake {
+    background-color: #414141;
+}
+
+#game-board {
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(20, 48px);
+    grid-template-rows: repeat(20, 48px);
+    background-color: #eee;
+    opacity: 0.6;
 }
 
 #instruction-text {
@@ -46,6 +44,7 @@ body {
     text-transform: capitalize;
     padding: 30px;
     margin: 0;
+
 }
 
 .scores {
@@ -59,9 +58,9 @@ body {
 
 #score,
 #highScore {
-    font-size: 32px; /* Verkleinert für kleinere Auflösung */
+    font-size: 1.6em;
+    /* Verkleinert für kleinere Auflösung */
     font-weight: bolder;
-    margin: 10px 0;
 }
 
 #highScore {
@@ -80,7 +79,8 @@ body {
 
 .food {
     background-color: #dedede;
-    border: #999 4px solid; /* Verkleinert für kleinere Auflösung */
+    border: #999 4px solid;
+    /* Verkleinert für kleinere Auflösung */
 }
 
 #logo {

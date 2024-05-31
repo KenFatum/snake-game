@@ -1,0 +1,13 @@
+        if (firtSnakeElement) {
+            if( direction === "right") {
+                firtSnakeElement.style.transform = "rotate(180deg)";          
+            } else if( direction === 'left') {
+                firtSnakeElement.style.transform = "rotate(180deg)";          
+            } else if (direction == 'up') {
+                firtSnakeElement.style.transform = "rotate(-90deg)";
+            } else if (direction == 'down') {
+                firtSnakeElement.style.transform = "rotate(90deg)";
+            }
+        } else {
+            snakeElement.style.borderRadius = "0 50% 50% 0";
+        }
